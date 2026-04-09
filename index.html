@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Webbutik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Min Webbutik</h1>
+
+    <!-- Kategorier -->
+    <div id="kategorier">
+        <button onclick="filtreraKategori('Alla')">Alla</button>
+        <button onclick="filtreraKategori('Kvinna')">Kvinna</button>
+        <button onclick="filtreraKategori('Man')">Man</button>
+        <button onclick="filtreraKategori('Barn')">Barn</button>
+    </div>
+
+    <!-- Produkter -->
+    <div id="produkter"></div>
+
+    <!-- Varukorg -->
+    <h2>Varukorg</h2>
+    <table id="varukorg-tabell">
+        <thead>
+            <tr>
+                <th>Produkt</th>
+                <th>Pris</th>
+                <th>Antal</th>
+                <th>Summa</th>
+                <th>Åtgärder</th>
+            </tr>
+        </thead>
+        <tbody id="varukorg-body"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Totalt:</td>
+                <td id="total">0</td>
+                <td><button onclick="rensaVarukorg()">Ta bort allt</button></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
